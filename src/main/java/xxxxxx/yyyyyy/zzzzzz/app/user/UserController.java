@@ -44,9 +44,9 @@ public class UserController {
     @RequestMapping(value = "create", params = "confirm", method = RequestMethod.POST)
     public String createConfirm(@Validated({ Default.class,
             UserCreateGroup.class }) UserForm form, BindingResult result) {
-        if (result.hasErrors()) {
+        if (result.hasErrors()) 
             return "user/createForm";
-        }
+        
         return "user/createConfirm";
     }
 
